@@ -1,5 +1,19 @@
 Requirements: Python 2.x, with bsddb and twisted packages
 
+Examples:
+
+Dump on Windows
+python pywallet.py --dumpwallet --otherversion=26 --datadir=C:\pywallet > dump.txt
+
+Recovery on Windows
+python pywallet.py --recover --recov_device C:\pywallet\wallet.dat --recov_size 10Gio --recov_outputdir C:\pywallet\foundkeys
+
+Recovery on Linux
+./pywallet.py --recover --recov_device /pywallet/wallet.dat --recov_size 10Gio --recov_outputdir /pywallet/foundkeys
+
+Encrypted wallets: tested and works fine with encrypted wallets it will prompt for password or you can use the "--passphrase=YourPassword" in the command
+
+
 Usage: pywallet.py [options]
 
 Options:
